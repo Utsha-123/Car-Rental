@@ -9,6 +9,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
+        // $data is a random variable to be called to show data of model
         $data = Category::all();
         return view("admin.categories", compact('data'));
     }

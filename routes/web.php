@@ -1,14 +1,25 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\ProductController;
-use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController;
+use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoriesController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', [TestController::class,'index']);
+
+// Route::get('/store-session', [TestController::class,'StoreSession']);
+// Route::get('/delete-session', [TestController::class,'DeleteSession']);
+
+
+
+Route::get('/about-us', [UserController::class, 'aboutus'])->name('about-us');
+Route::get('/deals', [UserController::class, 'deals'])->name('deals');
+Route::get('/choose-us', [UserController::class, 'chooseus'])->name('choose-us');
+Route::get('/testimonials', [UserController::class, 'testimonials'])->name('testimonials');
+
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'handleLogin']);
@@ -16,9 +27,12 @@ Route::get('/registration', [AuthController::class, 'registration'])->name('regi
 Route::post('/registration', [AuthController::class, 'handleRegistration']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/homepage', [AuthController::class, 'homepage'])->name('homepage');
-
-
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->middleware(['auth','is-admin:admin'])->name('dashboard');
+
+// homepage
+Route::get('/', [UserController::class, 'welcome'])->name('welcome');
+
+
 // Categories
 Route::get('/categories', [CategoriesController::class, 'index'])->name('categories');
 Route::get('/categories/create', [CategoriesController::class, 'create'])->name('categories.create');

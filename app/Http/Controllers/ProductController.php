@@ -63,7 +63,7 @@ class ProductController extends Controller
             'category_id' => $request->categories,
             'stock' => $request->stock,
             'discounted_price' => $request->discount,
-            'product_image' => $storedFiles,
+            'product_image' => json_encode($storedFiles), 
         ]);
 
     

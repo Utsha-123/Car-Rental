@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <!-- for admin panel (sidebar ) -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 
+    <!-- for admin panel (sidebar ) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
 
 </head>
+
 <body class="bg-gray-100">
     <div class="flex h-screen bg-gray-100">
         <!-- Sidebar -->
@@ -22,11 +26,17 @@
                 <span class="text-2xl font-extrabold">Dashboard</span>
             </a>
 
-            <nav>
-                <a href="{{url('/categories')}}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+            @if (session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+            @endif
+
+          <nav>
+                <a href="{{route('categories')}}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
                     Categories
                 </a>
-                <a href="{{url('/product')}}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                <a href="{{route('product')}}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
                     Products
                 </a>
             </nav>
@@ -52,45 +62,63 @@
                 </div>
             </header>
 
-             <!-- Page Content -->
-    <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 p-6">
-            @yield('content')
+            <!-- Page Content -->
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 p-6">
+                @yield('content')
             </main>
-    
+
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.getElementById('sidebar');
-    const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
 
-    function toggleSidebar() {
-        sidebar.classList.toggle('-translate-x-full');
-    }
+            function toggleSidebar() {
+                sidebar.classList.toggle('-translate-x-full');
+            }
 
-    sidebarToggle.addEventListener('click', toggleSidebar);
+            sidebarToggle.addEventListener('click', toggleSidebar);
 
-    // Close sidebar when clicking outside of it
-    document.addEventListener('click', function(event) {
-        const isClickInsideSidebar = sidebar.contains(event.target);
-        const isClickToggleButton = sidebarToggle.contains(event.target);
+            // Close sidebar when clicking outside of it
+            document.addEventListener('click', function(event) {
+                const isClickInsideSidebar = sidebar.contains(event.target);
+                const isClickToggleButton = sidebarToggle.contains(event.target);
 
-        if (!isClickInsideSidebar && !isClickToggleButton && !sidebar.classList.contains('-translate-x-full')) {
-            toggleSidebar();
-        }
+                if (!isClickInsideSidebar && !isClickToggleButton && !sidebar.classList.contains('-translate-x-full')) {
+                    toggleSidebar();
+                }
+            });
+
+            // Update sidebar state on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    sidebar.classList.remove('-translate-x-full');
+                } else {
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        });
+
+// for images in deals
+        $(document).ready(function(){
+      $('.image-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
     });
-
-    // Update sidebar state on window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) {
-            sidebar.classList.remove('-translate-x-full');
-        } else {
-            sidebar.classList.add('-translate-x-full');
-        }
-    });
-});
-
-
     </script>
+    
 </body>
-</html>   
+
+</html>
