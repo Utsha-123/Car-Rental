@@ -97,15 +97,19 @@
             <input type="email" id="email" name="email" value="{{ old('email') }}" required />
 
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" 
-                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" 
-                title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long" 
+            <input type="password" id="password" name="password"
+                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
                 required />
 
             <label for="password_confirmation">Confirm Password</label>
             <input type="password" id="password_confirmation" name="password_confirmation" required />
 
             <button type="submit">Register</button>
+            <small style="display: block; text-align: center; margin-top: 10px; color: #555;">
+                Already have an account? <a href="{{ route('login') }}" style="color: #4caf50; text-decoration: none;">Login here</a>
+            </small>
+
         </form>
     </div>
 </body>

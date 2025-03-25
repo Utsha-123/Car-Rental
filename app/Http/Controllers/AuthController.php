@@ -29,9 +29,14 @@ class AuthController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             // Store user info in the session
             $request->session()->put('user', Auth::user());
-
-            // Redirect to dashboard with a success message
-            return redirect()->route('dashboard')->with('success', 'Logged in successfully');
+            
+            if (Auth::user()->role === 'admin') {
+                // Redirect to dashboard if the user is an admin
+                return redirect()->route('dashboard')->with('success', 'Logged in successfully');
+            } elseif (Auth::user()->role === 'customer') {
+                // Redirect to welcome page if the user is a regular user
+                return redirect()->route('welcome')->with('success', 'Logged in successfully');
+            }
         }
 
         // Redirect back with error message if login fails

@@ -12,11 +12,13 @@
       incredible rate!
     </p>
     <div class="deals__tabs">
-      <button class="btn active" data-id="Tesla">Tesla</button>
-      <button class="btn" data-id="Mitsubishi">Mitsubishi</button>
-      <button class="btn" data-id="Mazda">Mazda</button>
-      <button class="btn" data-id="Toyota">Toyota</button>
-      <button class="btn" data-id="Honda">Honda</button>
+    @foreach($categories as $category)
+        <a href="{{ route('deals', ['category_id' => $category->id]) }}" 
+           class="btn {{ request('category_id') == $category->id ? 'active' : '' }}">
+            {{ $category->name }}
+        </a>
+    @endforeach
+      
     </div>
 
 
@@ -61,17 +63,22 @@
         <h4>{{ $datas->name }}</h4>
         <div class="deals__card__grid">
           <div>
-            <span><i class="ri-group-line"></i></span> {{ $datas->description }}
-          </div>
-
+                <span><i class="ri-group-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Autopilot
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 400km
+              </div>
           <div>
             <span><i class="ri-car-line"></i></span> Electric
           </div>
         </div>
         <hr />
         <div class="deals__card__footer">
-          <h3>$180<span>/Per Day</span></h3>
-          <a href="#">
+          <h3>${{$datas->price}}</h3>
+          <a href="{{ route('book.vehicle', $datas->id) }}">
             Rent Now
             <span><i class="ri-arrow-right-line"></i></span>
           </a>
@@ -85,6 +92,14 @@
   </div>
   </div>
 </section>
+
+<style>
+    .btn.active {
+        background-color: #ff6600; /* Change to your preferred active color */
+        color: white;
+        font-weight: bold;
+    }
+</style>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">

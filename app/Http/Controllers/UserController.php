@@ -3,29 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    function welcome(){
-        return view('welcome');
+    public function welcome(){
+        $products = Product::all();
+        $categories = Category::all();
+        return view('welcome',compact('products','categories'));
     }
 
-    function aboutus(){
+    public function aboutus(){
         return view('aboutus');
     }
 
-    function deals(){
-        $products = Product::all();
-        return view('deals',compact('products'));
+    public function deals(Request $request) {
+        $categories = Category::all();
+    
+        // Check if a category is selected
+        if ($request->has('category_id')) {
+            $products = Product::where('category_id', $request->category_id)->get();
+        } else {
+            $products = Product::all();
+        }
+    
+        return view('deals', compact('products', 'categories'));
     }
     
+    
 
-    function chooseus(){
+    public function chooseus(){
         return view('chooseus');
     }
     
-    function testimonials(){
+    public function testimonials(){
         return view('testimonials');
     }
     

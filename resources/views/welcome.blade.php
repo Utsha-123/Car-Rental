@@ -7,10 +7,10 @@
   <header>
     <div class="header__container" id="home">
       <div class="header__image">
-        <img src="{{ asset('images/header.png') }}" alt="header"  />
+        <img src="{{ asset('images/header.png') }}" alt="header" />
       </div>
       <div class="header__content">
-      <h2><i class="fa-regular fa-thumbs-up " style="color: #FFD43B;"></i>100% Trusted car rental platform</h2>
+        <h2><i class="fa-regular fa-thumbs-up " style="color: #FFD43B;"></i>100% Trusted car rental platform</h2>
         <h1>FAST AND EASY WAY TO RENT A CAR</h1>
         <p class="section__description">
           Discover a seamless car rental experience with us. Choose from a
@@ -52,9 +52,9 @@
     </form>
   </section>
 
-<!-- About Us -->
+  <!-- About Us -->
 
-<section class="section__container about__container" id="about">
+  <section class="section__container about__container" id="about">
     <h2 class="section__header">How it work</h2>
     <p class="section__description">
       Renting a car with us is simple! Choose your vehicle, pick your dates,
@@ -90,548 +90,101 @@
   </section>
 
   <!-- Deals -->
-  <section class="deals" id="deals">
-    <div class="section__container deals__container">
-      <h2 class="section__header">Most popular car rental deals</h2>
-      <p class="section__description">
-        Explore our top car rental deals, handpicked to give you the best
-        value and experience. Book now and drive your favorite ride at an
-        incredible rate!
-      </p>
-      <div class="deals__tabs">
-        <button class="btn active" data-id="Tesla">Tesla</button>
-        <button class="btn" data-id="Mitsubishi">Mitsubishi</button>
-        <button class="btn" data-id="Mazda">Mazda</button>
-        <button class="btn" data-id="Toyota">Toyota</button>
-        <button class="btn" data-id="Honda">Honda</button>
-      </div>
-      <div id="Tesla" class="tab__content active">
-        <div class="deals__card">
-          <img src="{{ asset('images/deals-1.png') }}" alt="deals" />
-          <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(550)</span>
-          </div>
-          <h4>Tesla Model S</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Autopilot
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 400km
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Electric
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$180<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-2.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(450)</span>
-          </div>
-          <h4>Tesla Model E</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Autopilot
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 400km
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Electric
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$150<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-3.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(550)</span>
-          </div>
-          <h4>Tesla Model Y</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Autopilot
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 400km
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Electric
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$200<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="Mitsubishi" class="tab__content">
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-4.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(350)</span>
-          </div>
-          <h4>Mirage</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$120<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-5.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(250)</span>
-          </div>
-          <h4>Xpander</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$150<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-6.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(150)</span>
-          </div>
-          <h4>Pajero Sports</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$180<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="Mazda" class="tab__content">
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-7.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(200)</span>
-          </div>
-          <h4>Mazda CX5</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$130<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-8.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(100)</span>
-          </div>
-          <h4>Mazda CX-30</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$200<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-9.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(180)</span>
-          </div>
-          <h4>Mazda CX-9</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$180<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="Toyota" class="tab__content">
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-10.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(250)</span>
-          </div>
-          <h4>Corolla</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$180<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-11.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(550)</span>
-          </div>
-          <h4>Innova</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$150<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">       
-           <img src="{{ asset('images/deals-12.png') }}" alt="deals" />
-          <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(180)</span>
-          </div>
-          <h4>Fortuner</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$190<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="Honda" class="tab__content">
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-13.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(200)</span>
-          </div>
-          <h4>Amaze</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$100<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-14.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(350)</span>
-          </div>
-          <h4>Elevate</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$120<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="deals__card">
-        <img src="{{ asset('images/deals-15.png') }}" alt="deals" />
-        <div class="deals__rating">
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-fill"></i></span>
-            <span><i class="ri-star-line"></i></span>
-            <span>(300)</span>
-          </div>
-          <h4>City</h4>
-          <div class="deals__card__grid">
-            <div>
-              <span><i class="ri-group-line"></i></span> 4 People
-            </div>
-            <div>
-              <span><i class="ri-steering-2-line"></i></span> Manual
-            </div>
-            <div>
-              <span><i class="ri-speed-up-line"></i></span> 18km/l
-            </div>
-            <div>
-              <span><i class="ri-car-line"></i></span> Diesel
-            </div>
-          </div>
-          <hr />
-          <div class="deals__card__footer">
-            <h3>$150<span>/Per Day</span></h3>
-            <a href="#">
-              Rent Now
-              <span><i class="ri-arrow-right-line"></i></span>
-            </a>
-          </div>
-        </div>
-      </div>
+<section class="deals" id="deals">
+  <div class="section__container deals__container">
+    <h2 class="section__header">Most popular car rental deals</h2>
+    <p class="section__description">
+      Explore our top car rental deals, handpicked to give you the best
+      value and experience. Book now and drive your favorite ride at an
+      incredible rate!
+    </p>
+    <div class="deals__tabs">
+    @foreach($categories as $category)
+        <a href="{{ route('deals', ['category_id' => $category->id]) }}" 
+           class="btn {{ request('category_id') == $category->id ? 'active' : '' }}">
+            {{ $category->name }}
+        </a>
+    @endforeach
+      
     </div>
-  </section>
-<!-- why choose us -->
-  
-<section class="choose__container" id="choose">
+
+
+    <div id="Tesla" class="tab__content active">
+      @foreach($products as $datas)
+      <div class="deals__card">
+        <?php
+        $decodedImages = json_decode($datas->product_image, true);
+        ?>
+
+        @if(!empty($decodedImages) && is_array($decodedImages))
+        <!-- Bootstrap Carousel -->
+        <div id="carousel{{$datas->id}}" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            @foreach ($decodedImages as $index => $image)
+            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+              <img src="{{ asset('products/'.$image) }}" class="d-block w-100" alt="Product Image">
+            </div>
+            @endforeach
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{$datas->id}}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"><-</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel{{$datas->id}}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">-></span>
+          </button>
+        </div>
+        @else
+        <span class="text-gray-500">No images available</span>
+        @endif
+
+        <div class="deals__rating">
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-line"></i></span>
+          <span>(550)</span>
+        </div>
+        <h4>{{ $datas->name }}</h4>
+        <div class="deals__card__grid">
+          <div>
+                <span><i class="ri-group-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Autopilot
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 400km
+              </div>
+          <div>
+            <span><i class="ri-car-line"></i></span> Electric
+          </div>
+        </div>
+        <hr />
+        <div class="deals__card__footer">
+          <h3>${{$datas->price}}</h3>
+          <a href="{{ route('book.vehicle', $datas->id) }}">
+            Rent Now
+            <span><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+      </div>
+      @endforeach
+
+
+
+    </div>
+  </div>
+  </div>
+</section>
+
+  <!-- why choose us -->
+
+  <section class="choose__container" id="choose">
     <div class="choose__image">
-    <img src="{{ asset('images/choose.png') }}" alt="choose" />
+      <img src="{{ asset('images/choose.png') }}" alt="choose" />
     </div>
     <div class="choose__content">
       <h2 class="section__header">Why choose us</h2>
@@ -693,7 +246,7 @@
   <!-- subscribe -->
   <section class="subscribe__container">
     <div class="subscribe__image">
-    <img src="{{ asset('images/subscribe.png') }}" alt="subscribe" />
+      <img src="{{ asset('images/subscribe.png') }}" alt="subscribe" />
     </div>
     <div class="subscribe__content">
       <h2 class="section__header">
@@ -711,8 +264,8 @@
     </div>
   </section>
 
-<!-- testimonials -->
-<section class="section__container client__container" id="client">
+  <!-- testimonials -->
+  <section class="section__container client__container" id="client">
     <h2 class="section__header">What people say about us?</h2>
     <p class="section__description">
       Discover why our customers love renting with us! Read real reviews and
@@ -726,7 +279,7 @@
         <div class="swiper-slide">
           <div class="client__card">
             <div class="client__details">
-            <img src="{{ asset('images/client-1.jpg') }}" alt="client" />
+              <img src="{{ asset('images/client-1.jpg') }}" alt="client" />
               <div>
                 <h4>Sarah Johnson</h4>
                 <div class="client__rating">
@@ -748,7 +301,7 @@
         <div class="swiper-slide">
           <div class="client__card">
             <div class="client__details">
-            <img src="{{ asset('images/client-2.jpg') }}" alt="client" />
+              <img src="{{ asset('images/client-2.jpg') }}" alt="client" />
               <div>
                 <h4>Michael Adams</h4>
                 <div class="client__rating">
@@ -770,7 +323,7 @@
         <div class="swiper-slide">
           <div class="client__card">
             <div class="client__details">
-            <img src="{{ asset('images/client-3.jpg') }}" alt="client" />
+              <img src="{{ asset('images/client-3.jpg') }}" alt="client" />
               <div>
                 <h4>Emily Martinez</h4>
                 <div class="client__rating">
@@ -792,7 +345,7 @@
         <div class="swiper-slide">
           <div class="client__card">
             <div class="client__details">
-            <img src="{{ asset('images/client-4.jpg') }}" alt="client" />
+              <img src="{{ asset('images/client-4.jpg') }}" alt="client" />
               <div>
                 <h4>Jason Lee</h4>
                 <div class="client__rating">
@@ -814,7 +367,7 @@
         <div class="swiper-slide">
           <div class="client__card">
             <div class="client__details">
-            <img src="{{ asset('images/client-5.jpg') }}" alt="client" />
+              <img src="{{ asset('images/client-5.jpg') }}" alt="client" />
               <div>
                 <h4>David Thompson</h4>
                 <div class="client__rating">
@@ -836,7 +389,7 @@
       </div>
     </div>
   </section>
- 
+
 </body>
 
 </html>

@@ -9,9 +9,9 @@
     <!-- for admin panel (sidebar ) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 
 </head>
 
@@ -32,7 +32,7 @@
             </div>
             @endif
 
-          <nav>
+            <nav>
                 <a href="{{route('categories')}}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
                     Categories
                 </a>
@@ -55,11 +55,13 @@
                     <i class="fa-solid fa-user"></i>
                     <h1 class="text-xl font-semibold">Welcome, User</h1>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-200">
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-200">
                         Logout
                     </button>
-                </div>
+                </form>
+
             </header>
 
             <!-- Page Content -->
@@ -71,8 +73,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const sidebar = document.getElementById('sidebar');
@@ -104,21 +106,21 @@
             });
         });
 
-// for images in deals
-        $(document).ready(function(){
-      $('.image-slider').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: true,
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      });
-    });
+        // for images in deals
+        $(document).ready(function() {
+            $('.image-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
     </script>
-    
+
 </body>
 
 </html>

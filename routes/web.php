@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoriesController;
 
@@ -29,7 +30,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/homepage', [AuthController::class, 'homepage'])->name('homepage');
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->middleware(['auth','is-admin:admin'])->name('dashboard');
 
-// homepage
+// homepage     
 Route::get('/', [UserController::class, 'welcome'])->name('welcome');
 
 
@@ -49,6 +50,8 @@ Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('prod
 Route::put('/product/{id}/update', [ProductController::class, 'update'])->name('product.update');
 Route::delete('/product/{id}/delete', [ProductController::class, 'delete'])->name('product.delete');
 
-
-Route::get('/product2', [ProductController::class, 'product2'])->name('product2');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/booknow/{vehicle_id}', [BookingController::class, 'create'])->name('book.vehicle');
+    Route::post('/booknow', [BookingController::class, 'store'])->name('booking.store');
+});
 
