@@ -58,7 +58,7 @@
           <span><i class="ri-star-fill"></i></span>
           <span><i class="ri-star-fill"></i></span>
           <span><i class="ri-star-line"></i></span>
-          <span>(550)</span>
+          <span>(4)</span>
         </div>
         <h4>{{ $datas->name }}</h4>
         <div class="deals__card__grid">
@@ -77,7 +77,7 @@
         </div>
         <hr />
         <div class="deals__card__footer">
-          <h3>${{$datas->price}}</h3>
+          <!-- <h3>${{$datas->price}}</h3> -->
           <a href="{{ route('book.vehicle', $datas->id) }}">
             Rent Now
             <span><i class="ri-arrow-right-line"></i></span>

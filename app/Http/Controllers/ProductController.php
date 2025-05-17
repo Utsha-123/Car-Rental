@@ -134,4 +134,17 @@ catch (Exception $e) {
         Product::destroy($id);
         return redirect()->route('product')->with('status', 'Product Delete');
     }
+
+    public function availableCars(Request $request)
+{
+    $startDate = $request->start_date ?? now();
+    $endDate = $request->end_date ?? now()->addDays(1);
+
+    $vehicles = Product::all()->filter(function ($vehicle) use ($startDate, $endDate) {
+        return $vehicle->isAvailable($startDate, $endDate);
+    });
+
+    return view('available_cars', compact('vehicles', 'startDate', 'endDate'));
+}
+
 }

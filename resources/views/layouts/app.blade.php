@@ -25,8 +25,8 @@
         <div class="nav__logo">
           <a href="{{route('welcome')}}" class="logo">
             <img src="{{ asset('images/your_image.png') }}" alt="logo" class="logo-white" />
-            <span>Go Ride</span>
-          </a>
+            <img src="{{ asset('images/screenshot.png') }}" alt="Screenshot" width="1000">
+            </a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>

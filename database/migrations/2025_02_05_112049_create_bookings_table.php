@@ -9,8 +9,8 @@ return new class extends Migration {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             // vehicle id
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');// Foreign key to products
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');// Foreign key to users
             $table->string('file')->nullable(); // For legal documents
             $table->date('booking_date');
             $table->date('booking_end_date');

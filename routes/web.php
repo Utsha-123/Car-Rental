@@ -49,9 +49,13 @@ Route::post('/product/store', [ProductController::class, 'store'])->name('produc
 Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
 Route::put('/product/{id}/update', [ProductController::class, 'update'])->name('product.update');
 Route::delete('/product/{id}/delete', [ProductController::class, 'delete'])->name('product.delete');
+Route::get('/available-cars', [ProductController::class, 'availableCars'])->name('available.cars');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/booknow/{vehicle_id}', [BookingController::class, 'create'])->name('book.vehicle');
     Route::post('/booknow', [BookingController::class, 'store'])->name('booking.store');
+    Route::post('/booking/calculate-price', [BookingController::class, 'calculatePrice'])->name('booking.calculatePrice');
+
 });
+
 
